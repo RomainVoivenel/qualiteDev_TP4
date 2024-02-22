@@ -40,6 +40,11 @@ public class Etudiant{
     public String getAdresseMail(){
         return this.adresseMail;
     }
-
+    public void ajouterGroupe(Groupe groupe){
+        this.groupe.add(groupe);
+    }
+    public void ajouterNote(Note note){
+        this.note.add(note);
+    }
 
 }
