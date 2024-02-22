@@ -46,4 +46,18 @@ public class Groupe{
     public void ajouterCours(Cours cours){
         this.lesCours.add(cours);
     }
+    public boolean enleverEtudiant(Etudiant etudiant){
+        if (this.lesEtudiants.contains(etudiant)){
+            this.lesEtudiants.remove(etudiant);
+            return true;
+        }
+        return false;
+    }
+    public boolean enleverCours(Cours cours){
+        if (this.lesCours.contains(cours)){
+            this.lesCours.remove(cours);
+            return true;
+        }
+        return false;
+    }
 }
