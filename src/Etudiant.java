@@ -14,4 +14,3 @@ public class Etudiant{
         this.adresse_mail = adresse_mail;
     }
     }
-}
