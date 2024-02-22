@@ -1,12 +1,17 @@
+import java.util.List;
+import java.util.ArrayList;
+
 public class Salle{
     private String nom;
     private int nbPlace;
     private boolean salleOrdinateur;
+    public List<Horaire> listeHorraires;
 
     public Salle(String nom, int nbPlace, boolean salleOrdinateur){
         this.nom = nom;
         this.nbPlace = nbPlace;
         this.salleOrdinateur = salleOrdinateur;
+        this.listeHorraires = new ArrayList<>();
     }
 
     /**
@@ -45,5 +50,12 @@ public class Salle{
      */
     public boolean estSalleOrdinateur(){
         return this.salleOrdinateur;
+    }
+
+    public void ajouterHorraire(Horaire horaire){
+        this.listeHorraires.add(horaire);
+    }
+    public List<Horaire> getListeHoraires(){
+        return this.listeHorraires;
     }
 }
