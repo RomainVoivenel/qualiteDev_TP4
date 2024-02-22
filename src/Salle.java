@@ -7,4 +7,13 @@ public class Salle{
         this.nbPlace = nbPlace;
         this.salleOrdinateur = salleOrdinateur;
     }
+    public String getNom(){
+        return this.nom;
+    }
+    public int getNbPlace(){
+        return this.nbPlace;
+    }
+    public boolean estSalleOrdinateur(){
+        return this.salleOrdinateur;
+    }
 }
