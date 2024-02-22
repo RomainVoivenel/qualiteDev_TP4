@@ -1,16 +1,18 @@
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Horaire{
     private LocalDateTime startDate;
     private LocalDateTime endDate;
-    private Cours cours;
-    private Salle salle;
+    private List<Cours> lesCours;
+    private List<Salle> lesSalles;
 
     public Horaire(LocalDateTime startDate, LocalDateTime endDate, Cours cours, Salle salle){
         this.startDate = startDate;
         this.endDate = endDate;
-        this.cours = cours;
-        this.salle = salle;
+        this.lesCours = new ArrayList<>();
+        this.lesSalles = new ArrayList<>();
     }
     public LocalDateTime getStartDat(){
         return this.startDate;
@@ -18,10 +20,17 @@ public class Horaire{
     public LocalDateTime getEndDate(){
         return this.endDate;
     }
-    public Cours getCours(){
-        return this.cours;
+    public List<Cours> getlesCours(){
+        return this.lesCours;
     }
-    public Salle getSalle(){
-        return this.salle;
+    public List<Salle> getlesSalle(){
+        return this.lesSalles;
+    }
+
+    public void ajouterCours(Cours cours){
+        this.lesCours.add(cours);
+    }
+    public void ajouterSalle(Salle salle){
+        this.lesSalles.add(salle);
     }
 }
