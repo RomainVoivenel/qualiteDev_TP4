@@ -3,14 +3,30 @@ public class Etudiant{
     private String firstName;
     private String lastName;
     private String adresse;
-    private int numero_telephone;
-    private String adresse_mail;
+    private int numeroTelephone;
+    private String adresseMail;
 
-    public Etudiant(String firstName, String lastName, String adresse, int numero_telephone, String adresse_mail){
+    public Etudiant(String firstName, String lastName, String adresse, int numeroTelephone, String adresseMail){
         this.firstName = firstName;
         this.lastName = lastName;
         this.adresse = adresse;
-        this.numero_telephone = numero_telephone;
-        this.adresse_mail = adresse_mail;
+        this.numeroTelephone = numeroTelephone;
+        this.adresseMail = adresseMail;
     }
+    public String getFirstName(){
+        return this.firstName;
+    }
+    public String getLastName(){
+        return this.lastName;
+    }
+    public String getAdresse(){
+        return this.adresse;
+    }
+    public int getNumeroTelephone(){
+        return this.numeroTelephone;
+    }
+    public String getAdresseMail(){
+        return this.adresseMail;
+    }
+
 }
