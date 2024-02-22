@@ -9,5 +9,9 @@ public class Etudiant{
     public Etudiant(String firstName, String lastName, String adresse, int numero_telephone, String adresse){
         this.firstName = firstName;
         this.lastName = lastName;
+        this.adresse = adresse;
+        this.numero_telephone = numero_telephone;
+        this.adresse_mail = adresse_mail;
+    }
     }
 }
