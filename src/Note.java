@@ -5,23 +5,28 @@ public class Note{
     private Integer note;
     private int coefficient;
     private LocalDateTime date;
+    private Matiere matiere;
     
-    public Note(String nomControle, Integer note, int coefficient,LocalDateTime date){
+    public Note(String nomControle,Integer note,int coefficient,LocalDateTime date,Matiere matiere){
         this.nomControle = nomControle;
         this.note = note;
         this.coefficient = coefficient;
         this.date = date;
+        this.matiere = matiere;
     }
     public String getnomControle(){
-        return nomControle;
+        return this.nomControle;
     }
     public Integer getNote(){
-        return note;
+        return this.note;
     }
     public int getCoefficient(){
-        return coefficient;
+        return this.coefficient;
     }
     public LocalDateTime getDate(){
-        return date;
+        return this.date;
+    }
+    public Matiere getMatiere(){
+        return this.matiere;
     }
 }
