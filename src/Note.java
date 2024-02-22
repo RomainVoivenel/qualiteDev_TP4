@@ -1,5 +1,3 @@
-import java.util.List;
-import java.util.ArrayList;
 import java.time.LocalDateTime;
 
 public class Note{
@@ -16,10 +14,10 @@ public class Note{
         this.date = date;
         this.note = note;
     }
-    public String getnomControle(){
+    public String getNomControle(){
         return this.nomControle;
     }
-    public Etudiant getEtudiant{
+    public Etudiant getEtudiant(){
         return this.etudiant;
     }
     public int getCoefficient(){
@@ -29,6 +27,6 @@ public class Note{
         return this.date;
     }
     public float getNote(){
-        return this.note = note;
+        return this.note;
     }
 }
