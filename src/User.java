@@ -1,24 +1,18 @@
-import java.util.List;
-import java.util.ArrayList;
-
 public class User {
     private String name;
-    private List<Cours> lesCours;
+    private Cours cours;
 
-    public User(String name){
+
+    public User(String name, Cours cours){
         this.name = name;
-        this.lesCours = new ArrayList<>();
+        this.cours = cours;
     }
 
     public String getName(){
         return this.name;
     }
 
-    public List<Cours> getCours(){
-        return this.lesCours;
-    }
-
-    public void ajouterCours(Cours cours){
-        this.lesCours.add(cours);
+    public Cours getCours(){
+        return this.cours;
     }
 }
