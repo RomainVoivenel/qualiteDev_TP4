@@ -1,27 +1,29 @@
+import java.util.List;
+import java.util.ArrayList;
 import java.time.LocalDateTime;
 
 public class Note{
     private String nomControle;
-    private Integer note;
+    private Etudiant etudiant;
     private int coefficient;
     private LocalDateTime date;
     
-    public Note(String nomControle, Integer note, int coefficient,LocalDateTime date){
+    public Note(String nomControle,Etudiant etudiant, int coefficient,LocalDateTime date){
         this.nomControle = nomControle;
-        this.note = note;
+        this.etudiant = etudiant;
         this.coefficient = coefficient;
         this.date = date;
     }
     public String getnomControle(){
-        return nomControle;
+        return this.nomControle;
     }
-    public Integer getNote(){
-        return note;
+    public Etudiant getEtudiant{
+        return this.etudiant;
     }
     public int getCoefficient(){
-        return coefficient;
+        return this.coefficient;
     }
     public LocalDateTime getDate(){
-        return date;
+        return this.date;
     }
 }
