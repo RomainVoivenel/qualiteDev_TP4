@@ -52,9 +52,17 @@ public class Salle{
         return this.salleOrdinateur;
     }
 
+    /**
+     * Permet d'ajouter des horraire pour une salle si cette horraire n'est pas prise
+     * @param horaire un horaire
+     */
     public void ajouterHorraire(Horaire horaire){
         this.listeHorraires.add(horaire);
     }
+    /**
+     * Permet d'obtenir les horaires pris
+     * @return une liste d'horraire
+     */
     public List<Horaire> getListeHoraires(){
         return this.listeHorraires;
     }
