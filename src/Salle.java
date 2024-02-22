@@ -10,7 +10,7 @@ public class Salle{
     }
 
     public void setNom(String nom){
-        this.nom = nom
+        this.nom = nom;
     }
     public String getNom(){
         return this.nom;
@@ -22,7 +22,7 @@ public class Salle{
     public int getNbPlace(){
         return this.nbPlace;
     }
-    
+
     public boolean estSalleOrdinateur(){
         return this.salleOrdinateur;
     }
