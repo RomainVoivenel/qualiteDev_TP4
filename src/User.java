@@ -31,6 +31,6 @@ public class User {
 
     }
     public void ajouterNote(Etudiant etudiant, Note note){
-=======
+
     }
 }
