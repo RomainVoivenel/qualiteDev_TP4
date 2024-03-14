@@ -31,6 +31,132 @@ public class User {
 
     }
     public void ajouterNote(Etudiant etudiant, Note note){
-=======
+
+    }
+    public boolean ajouterNote(Etudiant etudiant, Note note){
+        for (Cours cours : this.lesCours){
+            for (Groupe groupe : cours.getLesGroupes()){
+                if (groupe.contains(etudiant)){
+                    etudiant.ajouterNote(note);
+                }
+            }
+        }
+    }
+
+    
+    public double calculerMoyenne(Groupe unGroupe){
+        double res = null;
+        int cpt = 0;
+        for (Cours cours : this.lesCours){
+            for(Groupe groupe : cours.getLesGroupes()){
+                if (groupe.equals(unGroupe)){
+                    for (Etudiant etudiant : groupe.getEtudiants()){
+                        for (Note note : etudiant.getNotes()){
+                            if (res == null || res < note.getNote()){
+                                res += note.getNote();
+                                cpt += 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if (cpt != 0){
+            return res/cpt;
+        }
+        return null;
+    }
+    public double notePlusBasse(Groupe unGroupe){
+        double res = null;
+        for (Cours cours : this.lesCours){
+            for(Groupe groupe : cours.getLesGroupes()){
+                if (groupe.equals(unGroupe)){
+                    for (Etudiant etudiant : groupe.getEtudiants()){
+                        for (Note note : etudiant.getNotes()){
+                            if (res == null || res > note.getNote()){
+                                res = note.getNote();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return res;
+    }
+    public double notePlusHaute(Groupe unGroupe){
+        double res = null;
+        for (Cours cours : this.lesCours){
+            for(Groupe groupe : cours.getLesGroupes()){
+                if (groupe.equals(unGroupe)){
+                    for (Etudiant etudiant : groupe.getEtudiants()){
+                        for (Note note : etudiant.getNotes()){
+                            if (res == null || res < note.getNote()){
+                                res = note.getNote();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return res;
+    }
+    public double calculerMoyenne(Etudiant etudiant){
+        double res = null;
+        int cpt = 0;
+        for (Cours cours : this.lesCours){
+            for(Groupe groupe : cours.getLesGroupes()){
+                for (Etudiant etudiant : groupe.getEtudiants()){
+                    if (etudiant.equals(unEtudiant)){
+                        for (Note note : etudiant.getNotes()){
+                            if (res == null || res < note.getNote()){
+                                res += note.getNote();
+                                cpt += 1;
+                            }
+                        }
+                        break
+                    }
+                }
+            }
+        }
+        if (cpt != 0){
+            return res/cpt;
+        }
+        return null;
+    }
+    public double notePlusBasse(Etudiant etudiant){
+        double res = null;
+        for (Cours cours : this.lesCours){
+            for(Groupe groupe : cours.getLesGroupes()){
+                for (Etudiant etudiant : groupe.getEtudiants()){
+                    if (etudiant.equals(unEtudiant)){
+                        for (Note note : etudiant.getNotes()){
+                            if (res == null || res > note.getNote()){
+                                res = note.getNote();
+                            }
+                        }
+                        break
+                    }
+                }    
+            }
+        }
+        return res;
+    }
+    public double notePlusHaute(Etudiant unEtudiant){
+        double res = null;
+        for (Cours cours : this.lesCours){
+            for(Groupe groupe : cours.getLesGroupes()){
+                for (Etudiant etudiant : groupe.getEtudiants()){
+                    if (etudiant.equals(unEtudiant)){
+                        for (Note note : etudiant.getNotes()){
+                            if (res == null || res < note.getNote()){
+                                res = note.getNote();
+                            }
+                        }
+                        break
+                    }
+                }
+            }
+        }
+        return res;
     }
 }

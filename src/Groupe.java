@@ -60,4 +60,15 @@ public class Groupe{
         }
         return false;
     }
+
+    @Override
+    public boolean equals(Object objet){
+        if (objet == null) {return false;}
+        if (objet == this) {return true;}
+        if (! (objet instanceof Groupe)) {return false;}
+        Groupe groupe = (Groupe)objet;
+        return this.nom.equals(groupe.getNom()) &&
+        this.lesEtudiants.equals(groupe.getEtudiants()) &&
+        this.lesCours.equals(groupe.getCours());
+    }
 }

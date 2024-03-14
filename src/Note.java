@@ -4,15 +4,12 @@ public class Note{
     private String nomControle;
     private Etudiant etudiant;
     private Matiere matiere;
-    private int coefficient;
-    private float note;
+    private double note;
     
-    public Note(String nomControle,Etudiant etudiant, Matiere matiere, int coefficient, float note){
+    public Note(String nomControle,Etudiant etudiant, Matiere matiere, double note){
         this.nomControle = nomControle;
         this.etudiant = etudiant;
         this.matiere = matiere;
-        this.coefficient = coefficient;
-        this.date = date;
         this.note = note;
     }
     public String getNomControle(){
@@ -20,9 +17,6 @@ public class Note{
     }
     public Etudiant getEtudiant(){
         return this.etudiant;
-    }
-    public int getCoefficient(){
-        return this.coefficient;
     }
     public LocalDateTime getDate(){
         return this.date;

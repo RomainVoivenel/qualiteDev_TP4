@@ -7,11 +7,11 @@ public class Cours {
     private List<Groupe> lesGroupes;
     private User utilisateur;
 
-    public Cours(Matiere matiere, Horaire horaire){
+    public Cours(Matiere matiere, Horaire horaire, User utilisateur){
         this.matiere = matiere;
         this.horaire = horaire;
         this.lesGroupes = new ArrayList<>();
-        this.utilisateur = new ArrayList<>();
+        this.utilisateur = utilisateur;
     }
 
     public Matiere getMatiere(){

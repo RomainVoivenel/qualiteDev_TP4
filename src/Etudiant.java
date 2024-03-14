@@ -5,8 +5,8 @@ public class Etudiant{
     private String firstName;
     private String lastName;
     private String adresse;
-    private List<Groupe> groupe;
-    private List<Note> note;
+    private List<Groupe> lesGroupe;
+    private List<Note> lesNotes;
     private int telephone;
     private String adresseMail;
 
@@ -14,8 +14,8 @@ public class Etudiant{
         this.firstName = firstName;
         this.lastName = lastName;
         this.adresse = adresse;
-        this.groupe = new ArrayList<>();
-        this.note = new ArrayList<>();
+        this.lesGroupe = new ArrayList<>();
+        this.lesNotes = new ArrayList<>();
         this.telephone = telephone;
         this.adresseMail = adresseMail;
     }
@@ -29,10 +29,10 @@ public class Etudiant{
         return this.adresse;
     }
     public List<Groupe> getGroupe(){
-        return this.groupe;
+        return this.lesGroupe;
     }
-    public List<Note> getNote(){
-        return this.note;
+    public List<Note> getNotes(){
+        return this.lesNotes;
     }
     public int getTelephone(){
         return this.telephone;
@@ -41,10 +41,23 @@ public class Etudiant{
         return this.adresseMail;
     }
     public void ajouterGroupe(Groupe groupe){
-        this.groupe.add(groupe);
+        this.lesGroupe.add(groupe);
     }
     public void ajouterNote(Note note){
         this.note.add(note);
     }
-
+    @Override
+    public boolean equals(Object objet){
+        if (objet == null) {return false;}
+        if (objet == this) {return true;}
+        if (! (objet instanceof Etudiant)) {return false;}
+        Etudiant etudiant = (Etudiant)objet;
+        return this.firstName.equals(etudiant.getFirstName()) &&
+        this.lastName.equals(etudiant.getLastName()) &&
+        this.adresse.equals(etudiant.getAdresse()) &&
+        this.lesGroupe.equals(etudiant.getGroupe()) &&
+        this.lesNotes.equals(etudiant.getNotes()) &&
+        this.telephone == etudiant.getTelephone() &&
+        this.adresseMail.equals(etudiant.getAdresseMail());
+    }
 }
