@@ -10,7 +10,7 @@ public class Etudiant{
     private int telephone;
     private String adresseMail;
 
-    public Etudiant(String firstName, String lastName,String adresse,Groupe groupe,Note note,int telephone,String adresseMail){
+    public Etudiant(String firstName, String lastName,String adresse,int telephone,String adresseMail){
         this.firstName = firstName;
         this.lastName = lastName;
         this.adresse = adresse;
