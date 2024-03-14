@@ -5,10 +5,9 @@ public class Note{
     private Etudiant etudiant;
     private Matiere matiere;
     private int coefficient;
-    private LocalDateTime date;
     private float note;
     
-    public Note(String nomControle,Etudiant etudiant, Matiere matiere, int coefficient,LocalDateTime date,float note){
+    public Note(String nomControle,Etudiant etudiant, Matiere matiere, int coefficient, float note){
         this.nomControle = nomControle;
         this.etudiant = etudiant;
         this.matiere = matiere;
