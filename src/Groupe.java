@@ -46,6 +46,11 @@ public class Groupe{
     public void ajouterCours(Cours cours){
         this.lesCours.add(cours);
     }
+    /**
+     * Permet d'enlever un étudiant d'un groupe
+     * @param etudiant l'étudiant à enlever
+     * @return renvoie true si l'étudiant à bien été enlevé du groupe sinon renvoie false
+     */
     public boolean enleverEtudiant(Etudiant etudiant){
         if (this.lesEtudiants.contains(etudiant)){
             this.lesEtudiants.remove(etudiant);
@@ -53,6 +58,11 @@ public class Groupe{
         }
         return false;
     }
+    /**
+     * Permet d'enlever un cours d'un groupe
+     * @param cours le cours à enlever
+     * @return renvoie true si le cours à bien été enlevé du groupe sinon renvoie false
+     */
     public boolean enleverCours(Cours cours){
         if (this.lesCours.contains(cours)){
             this.lesCours.remove(cours);
