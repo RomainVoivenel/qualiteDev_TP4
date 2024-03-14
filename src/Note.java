@@ -10,7 +10,6 @@ public class Note{
         this.nomControle = nomControle;
         this.etudiant = etudiant;
         this.matiere = matiere;
-        this.coefficient = coefficient;
         this.note = note;
     }
     public String getNomControle(){

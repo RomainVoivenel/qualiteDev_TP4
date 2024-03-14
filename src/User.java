@@ -28,6 +28,10 @@ public class User {
             }
         }
         return false
+
+    }
+    public void ajouterNote(Etudiant etudiant, Note note){
+=======
     }
     public boolean ajouterNote(Etudiant etudiant, Note note){
         for (Cours cours : this.lesCours){
