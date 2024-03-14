@@ -37,4 +37,11 @@ public class Cours {
     public void ajouterUser(User user){
         this.lesUser.add(user);
     }
+
+    @Override
+
+    public String toString(){
+        return "Matiere :" + this.matiere + "horaire :" + this.horaire + "\n" 
+        + "les Groupes :" + this.lesGroupes + "\n" + "les utiliseurs :" + this.lesUser;
+    }
 }

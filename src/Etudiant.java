@@ -5,8 +5,8 @@ public class Etudiant{
     private String firstName;
     private String lastName;
     private String adresse;
-    private List<Groupe> groupe;
-    private List<Note> note;
+    private List<Groupe> groupes;
+    private List<Note> notes;
     private int telephone;
     private String adresseMail;
 
@@ -14,8 +14,8 @@ public class Etudiant{
         this.firstName = firstName;
         this.lastName = lastName;
         this.adresse = adresse;
-        this.groupe = new ArrayList<>();
-        this.note = new ArrayList<>();
+        this.groupes = new ArrayList<>();
+        this.notes = new ArrayList<>();
         this.telephone = telephone;
         this.adresseMail = adresseMail;
     }
@@ -28,11 +28,11 @@ public class Etudiant{
     public String getAdresse(){
         return this.adresse;
     }
-    public List<Groupe> getGroupe(){
-        return this.groupe;
+    public List<Groupe> getGroupes(){
+        return this.groupes;
     }
-    public List<Note> getNote(){
-        return this.note;
+    public List<Note> getNotes(){
+        return this.notes;
     }
     public int getTelephone(){
         return this.telephone;
@@ -41,10 +41,18 @@ public class Etudiant{
         return this.adresseMail;
     }
     public void ajouterGroupe(Groupe groupe){
-        this.groupe.add(groupe);
+        this.groupes.add(groupe);
     }
     public void ajouterNote(Note note){
-        this.note.add(note);
+        this.notes.add(note);
     }
 
+    @Override
+    
+    public String toString(){
+        return "Prenom :" + this.firstName + "Nom :" + this.lastName + "\n" 
+        + "Adresse :" + this.adresse + "Groupes :" + this.groupes  + "\n" 
+        + "Notes :" + this.notes + "Telephone :" + this.telephone + 
+        "Adresse mail :" + this.adresseMail;
+    }
 }

@@ -29,4 +29,11 @@ public class Note{
     public float getNote(){
         return this.note;
     }
+
+    @Override
+
+    public String toString(){
+        return "Nom du Controle :" + this.nomControle + "Etudiant :" + this.etudiant + "\n" 
+        + "Coefficient :" + this.coefficient + "\n" + "Date :" + this.date+ "Note :" + this.note;
+    }
 }

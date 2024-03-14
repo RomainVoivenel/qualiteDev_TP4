@@ -33,4 +33,11 @@ public class Horaire{
     public void ajouterSalle(Salle salle){
         this.lesSalles.add(salle);
     }
+
+    @Override
+
+    public String toString(){
+        return "Date de début :" + this.startDate + "Date de fin :" + this.endDate + "\n" 
+        + "Les Cours :" + this.lesCours + "\n" + "Les Salles :" + this.lesSalles;
+    }
 }

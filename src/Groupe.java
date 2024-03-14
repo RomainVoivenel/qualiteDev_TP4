@@ -46,4 +46,11 @@ public class Groupe{
     public void ajouterCours(Cours cours){
         this.lesCours.add(cours);
     }
+
+    @Override
+    
+    public String toString(){
+        return "Nom :" + this.nom + "Les Etudiants :" + this.lesEtudiants + "\n" 
+        + "Les Cours :" + this.lesCours;
+    }
 }

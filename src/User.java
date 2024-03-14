@@ -15,4 +15,10 @@ public class User {
     public Cours getCours(){
         return this.cours;
     }
+
+    @Override
+
+    public String toString(){
+        return "Nom du cours :" + this.name + "Cours :" + this.cours + 
+    }
 }

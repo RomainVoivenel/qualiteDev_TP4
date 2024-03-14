@@ -66,4 +66,12 @@ public class Salle{
     public List<Horaire> getListeHoraires(){
         return this.listeHorraires;
     }
+
+    @Override
+
+    public String toString(){
+        return "Nom :" + this.nom + "Nombre de Place :" + this.nbPlace + "\n" 
+        + "Si c'est une salle des ordinateurs :" + this.salleOrdinateur + "\n" + "Liste des Horraires :" + this.listeHorraires;
+    }
+
 }
