@@ -8,13 +8,13 @@ public class Horaire{
     private List<Cours> lesCours;
     private List<Salle> lesSalles;
 
-    public Horaire(LocalDateTime startDate, LocalDateTime endDate, Cours cours, Salle salle){
+    public Horaire(LocalDateTime startDate, LocalDateTime endDate){
         this.startDate = startDate;
         this.endDate = endDate;
         this.lesCours = new ArrayList<>();
         this.lesSalles = new ArrayList<>();
     }
-    public LocalDateTime getStartDat(){
+    public LocalDateTime getStartDate(){
         return this.startDate;
     }
     public LocalDateTime getEndDate(){
