@@ -5,13 +5,13 @@ public class Salle{
     private String nom;
     private int nbPlace;
     private boolean salleOrdinateur;
-    public List<Horaire> listeHorraires;
+    public Horaire horaire;
 
-    public Salle(String nom, int nbPlace, boolean salleOrdinateur){
+    public Salle(String nom, int nbPlace, boolean salleOrdinateur, Horaire horaire){
         this.nom = nom;
         this.nbPlace = nbPlace;
         this.salleOrdinateur = salleOrdinateur;
-        this.listeHorraires = new ArrayList<>();
+        this.horaire = horaire;
     }
 
     /**
@@ -53,17 +53,10 @@ public class Salle{
     }
 
     /**
-     * Permet d'ajouter des horraire pour une salle si cette horraire n'est pas prise
-     * @param horaire un horaire
-     */
-    public void ajouterHorraire(Horaire horaire){
-        this.listeHorraires.add(horaire);
-    }
-    /**
      * Permet d'obtenir les horaires pris
      * @return une liste d'horraire
      */
-    public List<Horaire> getListeHoraires(){
+    public Horaire getHoraires(){
         return this.listeHorraires;
     }
 }

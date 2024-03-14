@@ -3,13 +3,14 @@ import java.time.LocalDateTime;
 public class Note{
     private String nomControle;
     private Etudiant etudiant;
+    private Matiere matiere;
     private int coefficient;
-    private LocalDateTime date;
     private float note;
     
-    public Note(String nomControle,Etudiant etudiant, int coefficient,LocalDateTime date,float note){
+    public Note(String nomControle,Etudiant etudiant, Matiere matiere, int coefficient, float note){
         this.nomControle = nomControle;
         this.etudiant = etudiant;
+        this.matiere = matiere;
         this.coefficient = coefficient;
         this.date = date;
         this.note = note;

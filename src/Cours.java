@@ -5,13 +5,13 @@ public class Cours {
     private Matiere matiere;
     private Horaire horaire;
     private List<Groupe> lesGroupes;
-    private List<User> lesUser;
+    private User utilisateur;
 
     public Cours(Matiere matiere, Horaire horaire){
         this.matiere = matiere;
         this.horaire = horaire;
         this.lesGroupes = new ArrayList<>();
-        this.lesUser = new ArrayList<>();
+        this.utilisateur = new ArrayList<>();
     }
 
     public Matiere getMatiere(){
@@ -26,15 +26,11 @@ public class Cours {
         return this.lesGroupes;
     }
 
-    public List<User> getLesUser(){
-        return this.lesUser;
+    public User getUtilisateur(){
+        return this.utilisateur;
     }
 
     public void ajouterGroupe(Groupe groupe){
         this.lesGroupes.add(groupe);
-    }
-
-    public void ajouterUser(User user){
-        this.lesUser.add(user);
     }
 }
