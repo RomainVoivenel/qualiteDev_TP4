@@ -1,11 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     private String name;
-    private Cours cours;
+    private List<Cours> lesCours;
 
 
-    public User(String name, Cours cours){
+    public User(String name){
         this.name = name;
-        this.cours = cours;
+        this.LesCours = new ArrayList<>();
     }
 
     public String getName(){
@@ -13,6 +16,6 @@ public class User {
     }
 
     public Cours getCours(){
-        return this.cours;
+        return this.lesCours;
     }
 }
