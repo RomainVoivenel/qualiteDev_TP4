@@ -46,5 +46,18 @@ public class Etudiant{
     public void ajouterNote(Note note){
         this.note.add(note);
     }
-
+    @Override
+    public boolean equals(Object objet){
+        if (objet == null) {return false;}
+        if (objet == this) {return true;}
+        if (! (objet instanceof Etudiant)) {return false;}
+        Etudiant etudiant = (Etudiant)objet;
+        return this.firstName.equals(etudiant.getFirstName()) &&
+        this.lastName.equals(etudiant.getLastName()) &&
+        this.adresse.equals(etudiant.getAdresse()) &&
+        this.lesGroupe.equals(etudiant.getGroupe()) &&
+        this.lesNotes.equals(etudiant.getNotes()) &&
+        this.telephone == etudiant.getTelephone() &&
+        this.adresseMail.equals(etudiant.getAdresseMail());
+    }
 }
