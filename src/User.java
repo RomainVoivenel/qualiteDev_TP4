@@ -31,18 +31,8 @@ public class User {
 
     }
     public void ajouterNote(Etudiant etudiant, Note note){
-
+        etudiant.ajouterNote(note);
     }
-    public boolean ajouterNote(Etudiant etudiant, Note note){
-        for (Cours cours : this.lesCours){
-            for (Groupe groupe : cours.getLesGroupes()){
-                if (groupe.contains(etudiant)){
-                    etudiant.ajouterNote(note);
-                }
-            }
-        }
-    }
-
     
     public double calculerMoyenne(Groupe unGroupe){
         double res = null;
